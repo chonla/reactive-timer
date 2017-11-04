@@ -1,3 +1,7 @@
 .tick {
   font: 256pt arial;
 }
+
+#tick-title {
+  font: 108pt arial;
+}

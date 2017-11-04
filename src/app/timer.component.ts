@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TimerService } from './timer.service';
 
 @Component({
   selector: 'timer',
@@ -6,35 +7,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./timer.component.css']
 })
 
-export class TimerComponent implements OnInit, OnDestroy {
-
-  private timerHandler;
-  private tick;
-
-  ngOnInit() {
-    this.tick = 0;
-    this._startTimer();
-  }
-
-  ngOnDestroy() {
-    this._clearTimer();
-  }
+export class TimerComponent {
+  constructor(private ts: TimerService) {}
 
   getTick() {
-    return this.tick;
+    return this.ts.current();
   }
-
-  private _startTimer() {
-    this.timerHandler = setTimeout(() => {
-      this.tick++;
-      this._startTimer();
-    }, 1000);
-  }
-
-  private _clearTimer() {
-    if (this.timerHandler) {
-      clearTimeout(this.timerHandler);
-    }
-  }
-
 }
