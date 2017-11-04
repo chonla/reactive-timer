@@ -29,4 +29,8 @@ export class TimeListComponent {
   isStarted() {
     return !this.ts.isStopped();
   }
+
+  isEmpty() {
+    return this.ts.isEmpty();
+  }
 }

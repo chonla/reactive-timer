@@ -59,6 +59,10 @@ export class TimerService {
     return (this.state === TimerState.STOPPED);
   }
 
+  isEmpty(): boolean {
+    return this.timeSeries.length === 0;
+  }
+
   current(): any {
     if (this.state === TimerState.STOPPED) {
       return {

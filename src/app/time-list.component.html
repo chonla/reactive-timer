@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center" [hidden]="isEmpty()">
   <button class="btn btn-dark" (click)="start()" [hidden]="isStarted()">
     <span class="octicon octicon-triangle-right"></span>
   </button>
