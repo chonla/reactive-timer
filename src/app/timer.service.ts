@@ -70,6 +70,9 @@ export class TimerService {
   }
 
   private _startTimer() {
+    if (this.timeSeries.length === 0) {
+      return;
+    }
     this.timerHandler = setTimeout(() => {
       this.tick.seconds--;
       if (this.tick.seconds <= 0) {
