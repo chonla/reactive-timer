@@ -58,8 +58,4 @@ describe('Timer Service', () => {
       'active': false
     }]);
   });
-
-  it('should break test', () => {
-    expect(true).toBe(false);
-  });
 });
