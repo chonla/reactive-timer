@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('timer App', () => {
+describe('reactive-timer2 App', () => {
   let page: AppPage;
 
   beforeEach(() => {
